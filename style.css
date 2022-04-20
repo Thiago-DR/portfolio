@@ -2,6 +2,7 @@
     --darker-background-color: #000000;
     --dark-background-color: #0E0E0E;
     --accent-color: #6000AB;
+    --gray-accent-color: #282828;
     --text-color: #EDDDF9;
 }
 *{
@@ -16,15 +17,21 @@ html {
 a{
     text-decoration: none;
 }
+section{
+    width: 100%;
+    height: 100vh;
+}
+/* utility */
+/* .hidden{
+    display: none!important;
+} */
 .center{
     padding: 0 15%;
 }
 
 /* FRONT PAGE */
-.frontpage{
+#frontpage{
     background-color: var(--darker-background-color);
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,20 +46,18 @@ a{
     border-radius: 2rem;
     
 }
-.accent-btn:hover{
+.accent-btn:hover , .accent-btn:active{
     background-color: var(--accent-color);
     color: white!important;
 }
 
 /* navbar   */
 nav{
-   
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 0;
-
-}
+}   
 .nav-items{
     display: flex;
     gap: .5rem;
@@ -107,4 +112,72 @@ nav{
 }
 .down-arrow img:hover{
     transform: scale(1.3);
+}
+/* PROJECTS */
+#projects{
+    background-color: var(--dark-background-color);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+#projects h2{
+    font-size: clamp(3rem, -1rem + 6vw, 3.5rem);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-bottom: 4rem;
+}
+.project-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.project-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: clamp(250px, 30%, 300px);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    transition: all .3s;
+    aspect-ratio: 3/2;
+    background-size: contain;
+    overflow: hidden;
+}
+.project-1{
+    background-image: url("images/tindog-project.png");
+}
+.project-2{
+    background-image: url("images/this-project.png");
+}
+.project-3{
+    background-image: url("images/simon-project.png");
+}
+
+.project-links{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    z-index: 2;
+}
+.project-tools{
+    display: flex;  
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+}
+.project-tool{
+    background-color: var(--gray-accent-color);
+    color: var(--text-color);
+    border-radius: .2rem;
+    padding: .25rem;
+}
+.project-links img{
+    width: 100%;
 }
