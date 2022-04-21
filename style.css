@@ -27,7 +27,7 @@ section{
 	background: var(--accent-color)!important;
 }
 .center{
-	padding: 0 10%;
+	padding: 2rem 10%;
 }
 
 /* FRONT PAGE */
@@ -57,7 +57,6 @@ nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 2rem 0;
 }   
 .nav-items{
 	display: flex;
@@ -76,7 +75,7 @@ nav{
 	transition: all .3s;
 }
 .nav-items a:hover{
-	color: white;
+	color: var(--accent-color);
 }
 
 .frontpage-content{
@@ -84,7 +83,6 @@ nav{
 	gap: 24px;
 	align-items: center;
 	justify-content: space-between;
-	padding: 3rem 0;
 }
 .frontpage-content h1{
 	font-size: clamp(3rem, -1rem + 6vw, 3.5rem);
@@ -94,10 +92,10 @@ nav{
 	padding-bottom: 3rem;
 }
 .content-left a{
-	font-size: clamp(1rem,1.5vw,1.25rem);
+	font-size: clamp(1rem,1.5vw,1.15rem);
 	font-weight: 600;
 	letter-spacing: 1px;
-	padding: 1rem 2.5rem;
+	padding: 1rem 2rem;
 }
 .content-right img{
 	width: clamp(400px, 100%, 560px);
@@ -148,6 +146,9 @@ nav{
 	transition: all .5s;
 	aspect-ratio: 3/2;
 	background-size: contain;
+}
+.project-item:hover{
+	transform: scale(1.1);
 }
 .project-1{
 	background-image: url("images/tindog-project.png");
@@ -212,7 +213,9 @@ nav{
 	}
 	.frontpage-content{
 		flex-direction: column;
-
+	}
+	.content-left{	
+		text-align: center;
 	}
 	.content-right{
 		display: none;
