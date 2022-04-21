@@ -133,7 +133,6 @@ nav{
 .project-container{
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -164,7 +163,7 @@ nav{
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: 2rem 0 0;
 }
 .project-links a{
     transition: all .3s;
@@ -183,7 +182,7 @@ nav{
     background-color: var(--dark-background-color);
     box-shadow: 0 0 2px rgba(0,0,0,.5);
     color: var(--text-color);
-    border-radius: .2rem;
-    padding: .5rem .75rem;
+    border-radius: 1.5rem;
+    padding: .75rem 1rem;
     cursor: default;
 }
